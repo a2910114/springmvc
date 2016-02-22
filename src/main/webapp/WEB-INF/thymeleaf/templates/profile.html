@@ -1,0 +1,25 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${user.username}"> profile</title>
+</head>
+<body>
+<div th:include="blocks/header"/>
+<div class="panel panel-default">
+    <div class="panel-heading" th:text="${user.username}"> profile</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>User name</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.email}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

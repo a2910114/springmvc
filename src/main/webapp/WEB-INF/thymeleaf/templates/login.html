@@ -1,0 +1,50 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Registration</title>
+</head>
+<body>
+<div th:include="blocks/header"/>
+
+<form method="POST" name="form" th:action="@{/login}"
+      class="form-horizontal" style="position:fixed;top:10%;left:40%;width:250px;" >
+    <fieldset>
+        <div id="legend">
+            <legend class="">Login</legend>
+        </div>
+        <div class="control-group">
+            <!-- Username -->
+            <label>Username</label>
+
+            <div class="controls">
+                <input type="text" name="username"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Password-->
+            <label>Password</label>
+
+            <div class="controls">
+                <input type="password" name="password"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <label for="remember_me" class="inline">Remember me</label>
+                <input id="remember_me" name="remember-me" type="checkbox"/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <!-- Button -->
+            <div class="controls">
+                <button class="btn btn-success">Login</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
